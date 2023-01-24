@@ -1,23 +1,31 @@
-import Button from "../components/Button";
+import MyButton from "../components/Button";
 
 export default {
   title: "Components/Button",
-  component: Button,
+  component: MyButton,
 };
 
-const Template = args => <Button {...args}/>
+const Template = (args) => <MyButton {...args} />;
 
-export const Primary = Template.bind({})
- 
+export const Default = Template.bind({});
+Default.args = {
+  label: "Default",
+}
+
+export const Primary = Template.bind({});
 Primary.args = {
-    backgroundColor: "#6B4EFF",
-    label: "Primary",
-}
+  label: "Primary",
+  type: "Primary",
+};
 
-export const Secondary = Template.bind({})
- 
+export const Secondary = Template.bind({});
 Secondary.args = {
-    backgroundColor: "#E7E7FF",
-    color: "#6B4EFF",
-    label: "Secondary",
-}
+  label: "Secondary",
+  type: "Secondary",
+};
+
+export const Tertiary = Template.bind({});
+Tertiary.args = {
+  label: "Tertiary",
+  type: "Tertiary",
+};
