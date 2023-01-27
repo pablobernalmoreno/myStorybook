@@ -28,8 +28,8 @@ const MyButton = styled.button`
     opacity: 1;
     transition: 0s;
   }
-  ${({ type }) => {
-    switch (type) {
+  ${({ variant }) => {
+    switch (variant) {
       case "Primary":
         return css`
           background-color: #457dff;
@@ -77,10 +77,10 @@ const MyButton = styled.button`
   }}
 `;
 
-function Button({ label, type, customStyles, onClick, ...otherProps }) {
+const Button = ({ label, variant, customStyles, onClick, ...otherProps }) => {
   return (
     <MyButton
-      type={type}
+      variant={variant}
       style={customStyles}
       onClick={onClick}
       {...otherProps}
@@ -88,5 +88,5 @@ function Button({ label, type, customStyles, onClick, ...otherProps }) {
       {label}
     </MyButton>
   );
-}
+};
 export default Button;
