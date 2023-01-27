@@ -1,4 +1,3 @@
-import { object } from "prop-types";
 import Button from "../components/Button";
 
 export default {
@@ -12,10 +11,10 @@ export default {
       control: { type: "text" },
       type: { required: true },
     },
-    type: {
-      name: "type",
+    variant: {
+      name: "variant",
       defaultValue: { summary: "" },
-      description: "Type of button to give styles",
+      description: "Variant of button to give styles",
       options: ["Primary", "Secondary", "Tertiary", "Default"],
       control: { type: "radio" },
     },
@@ -50,28 +49,28 @@ Default.args = {
 export const Primary = Template.bind({});
 Primary.args = {
   label: "Primary",
-  type: "Primary",
+  variant: "Primary",
   onClick: () => {},
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   label: "Secondary",
-  type: "Secondary",
+  variant: "Secondary",
   onClick: () => {},
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
   label: "Tertiary",
-  type: "Tertiary",
+  variant: "Tertiary",
   onClick: () => {},
 };
 
 export const Custom = Template.bind({});
 Custom.args = {
   label: "Custom",
-  type: "Custom",
+  variant: "Custom",
   customStyles: { backgroundColor: "red" },
   onClick: () => {},
 };
