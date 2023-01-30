@@ -56,7 +56,6 @@ const MyInput = styled.input`
       case "filled":
         return css`
           &.input {
-            background-color: white;
             border-radius: 5px;
             box-sizing: border-box;
             font-size: 18px;
@@ -138,7 +137,10 @@ const Textfield = ({
   inputOtherProps,
 }) => {
   return (
-    <InputContainer className="input-container ic1">
+    <InputContainer
+      className="input-container ic1"
+      data-testid="styled-input_container"
+    >
       <MyInput
         className="input"
         type="text"
@@ -146,6 +148,7 @@ const Textfield = ({
         variant={variant}
         onChange={onChange}
         style={inputCustomStyles}
+        data-testid="styled-input"
         {...inputOtherProps}
       />
       <InputContainer className="cut"></InputContainer>
@@ -153,6 +156,7 @@ const Textfield = ({
         className="placeholder"
         variant={variant}
         style={labelCustomStyles}
+        data-testid="styled-label"
         {...labelOtherProps}
       >
         {label}
