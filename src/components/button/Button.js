@@ -80,6 +80,7 @@ const MyButton = styled.button`
 const Button = ({ label, variant, customStyles, onClick, ...otherProps }) => {
   return (
     <MyButton
+      data-testid="styled-button"
       variant={variant}
       style={customStyles}
       onClick={onClick}
